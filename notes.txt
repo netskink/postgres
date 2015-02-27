@@ -1,0 +1,13 @@
+These are the files from /usr/share/doc/postgresql-doc-9.3/tutorial
+I created them by installing the docs then changing to the above directory and issuing make
+I copied the resultant .sql files to here.
+
+After you create a table, and you want to import a csv file do this:
+
+This assumes:
+o Its a .csv file.
+o The .csv has a header.
+o The primary key is not in the csv but in the table.
+COPY some_schema.some_table(some_field,another_field) from '/path/to/some.csv' WITH DELIMITER ',' CSV HEADER ;
+
+
